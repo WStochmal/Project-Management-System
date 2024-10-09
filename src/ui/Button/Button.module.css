@@ -1,0 +1,12 @@
+.defaultBtn {
+  border-radius: 0.5rem;
+  padding: 0.25rem 0.75rem;
+  background-color: #f0f0f0;
+  border: 0;
+  outline: 0;
+  color: black;
+  font-size: 1rem;
+}
+.disabledBtn {
+  background-color: red;
+}
