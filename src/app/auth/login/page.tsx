@@ -20,7 +20,7 @@ const LoginPage = () => {
 
     console.log(name, value);
 
-    if (!name) return;
+    if (!name || !value) return;
 
     setAuth({
       ...auth,
