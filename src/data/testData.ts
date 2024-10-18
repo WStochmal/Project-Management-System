@@ -1,6 +1,6 @@
 export const data = [
   {
-    id: 1,
+    id: "project-1",
     title: "Project",
     description: "This is a project",
     status: "ongoing",
@@ -9,32 +9,34 @@ export const data = [
     statuses: [
       {
         id: "status-1",
-        name: "status 1",
-        tasks: [
+        title: "status 1",
+        description: "This is status 1",
+        cards: [
           {
             id: "task-1",
-            name: "task 1",
+            title: "task 1",
             description: "This is task 1",
           },
           {
             id: "task-2",
-            name: "task 2",
+            title: "task 2",
             description: "This is task 2",
           },
         ],
       },
       {
         id: "status-2",
-        name: "status 2",
-        tasks: [
+        title: "status 2",
+        description: "This is status 2",
+        cards: [
           {
             id: "task-3",
-            name: "task 3",
+            title: "task 3",
             description: "This is task 3",
           },
           {
             id: "task-4",
-            name: "task 4",
+            title: "task 4",
             description: "This is task 4",
           },
         ],

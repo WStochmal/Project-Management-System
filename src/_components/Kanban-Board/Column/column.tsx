@@ -1,15 +1,17 @@
 import { DraggableComponent } from "@/features/dragAndDrop/DraggableComponent";
 import { DroppableComponent } from "@/features/dragAndDrop/DroppableComponent";
-import { Card } from "../Card/card";
+import { Card } from "../Card/Card";
+import { ColumnProps } from "@/interfaces/column-props";
+import style from "./Column.module.css";
 
-export const Column = ({ column }) => {
+export const Column = ({ column }: { column: ColumnProps }) => {
   return (
-    <DraggableComponent>
+    <DraggableComponent id={`column-${column.id}`}>
       <DroppableComponent>
-        <div className="column">
-          <div className="column-title">{column.title}</div>
-          <div className="column-cards">
-            {column.cards.map((card) => (
+        <div className={style.column}>
+          <div className={style.column_title}>{column?.title}</div>
+          <div className={style.column_cards}>
+            {column.cards?.map((card) => (
               <Card key={card.id} card={card} />
             ))}
           </div>

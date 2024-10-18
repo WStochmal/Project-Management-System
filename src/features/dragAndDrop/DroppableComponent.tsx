@@ -5,5 +5,14 @@ export const DroppableComponent = ({
 }: {
   children: React.ReactNode;
 }) => {
-  return <div draggable>{children}</div>;
+  const handleDrop = (e: React.DragEvent<HTMLDivElement>) => {
+    console.log("dropped");
+    const data = e.dataTransfer.getData("item");
+    console.log(data);
+  };
+  return (
+    <div draggable onDrop={handleDrop}>
+      {children}
+    </div>
+  );
 };

@@ -1,9 +1,10 @@
 import { DraggableComponent } from "@/features/dragAndDrop/DraggableComponent";
-
-export const Card = () => {
+import { CardProps } from "@/interfaces/card-props";
+import style from "./Card.module.css";
+export const Card = ({ card }: { card: CardProps }) => {
   return (
-    <DraggableComponent>
-      <div className="card">TEST{/* content */}</div>
+    <DraggableComponent id={`card-${card.id}`}>
+      <div className={style.card}>{card?.title}</div>
     </DraggableComponent>
   );
 };
