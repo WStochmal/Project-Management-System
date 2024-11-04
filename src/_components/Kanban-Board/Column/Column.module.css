@@ -18,4 +18,5 @@
   flex-direction: column;
   gap: 0.5rem;
   margin-bottom: 4rem;
+  transition: 0.3s;
 }

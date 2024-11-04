@@ -1,0 +1,18 @@
+.draggableComponent + .droppableComponent {
+  transition: 0.3s;
+  background: yellow;
+}
+
+.dragOverActive {
+  border: 1px solid black;
+}
+
+.dragOverIndicator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  background: #ececec;
+  height: 100px;
+}

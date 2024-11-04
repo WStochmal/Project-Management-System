@@ -1,14 +1,24 @@
 "use client";
-import { useState } from "react";
-import { data } from "@/data/testData";
+import { useEffect } from "react";
+import { data as testData } from "@/data/testData";
 import { Column } from "../Column/Column";
-import { ProjectProps } from "@/interfaces/project-props";
 
 // styles
 import style from "./Board.module.css";
+import { useProjectContext } from "@/_hooks/useProjectContext";
 
-export const Board = ({}) => {
-  const [projectData] = useState<ProjectProps>(data[0]);
+export const Board = () => {
+  const [projectData, setProjectData] = useProjectContext();
+
+  useEffect(() => {
+    if (!projectData && testData && testData.length > 0) {
+      setProjectData(testData[0]);
+    }
+  }, [projectData, setProjectData]);
+
+  if (!projectData) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <div className={style.board}>

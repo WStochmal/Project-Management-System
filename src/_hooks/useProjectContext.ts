@@ -8,5 +8,5 @@ export const useProjectContext = () => {
       "useProjectContext must be used within a ProjectContextProvider"
     );
   }
-  return context;
+  return [context.projectData, context.setProjectData] as const;
 };

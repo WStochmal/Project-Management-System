@@ -4,7 +4,6 @@ import { AuthContextProvider } from "@/_context/AuthContext";
 import { ProjectContextProvider } from "@/_context/ProjectContext";
 const ProjectPage = ({ params }) => {
   const { projectId } = params;
-  console.log(projectId);
 
   return (
     <ProjectContextProvider>

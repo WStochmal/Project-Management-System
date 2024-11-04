@@ -36,3 +36,7 @@ main {
   flex-direction: row;
   height: 100%;
 }
+
+.smooth {
+  transition: 0.3s;
+}
